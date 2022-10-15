@@ -25,13 +25,12 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import {MatListModule} from '@angular/material/list';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewCategoriasComponent } from './pages/admin/view-categorias/view-categorias.component';
-import { AddCategoriaComponent } from './pages/add-categoria/add-categoria.component';
-import { ViewExamenesComponent } from './pages/admin/view-examenes/view-examenes.component';
-import { AddExamenComponent } from './pages/admin/add-examen/add-examen.component';
+import { AddCategoriaComponent } from './pages/admin/add-categoria/add-categoria.component';
+import { ViewExamenesComponent } from './pages/view-examenes/view-examenes.component';
+import { AddExamenComponent } from './pages/add-examen/add-examen.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +63,6 @@ import { AddExamenComponent } from './pages/admin/add-examen/add-examen.componen
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatSlideToggleModule,
     MatSelectModule
   ],
   providers: [authInterceptorProviders],
