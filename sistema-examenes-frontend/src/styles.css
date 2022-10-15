@@ -1,9 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
+:root{
+  --color-primario : #81ac37;
+  --fuente-principal : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+html, body { 
+  height: 100%; 
+}
+h1,h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+}
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: #f5f5f5;
 }
 
@@ -49,4 +60,13 @@ body {
 
 .ml70{
   margin-left: 70px !important;
+}
+
+.color-boton-principal{
+  background-color: #81ac37;
+  font-family: var(--fuente-principal);
+}
+.color-boton-segundario{
+  background-color: #4b7728;
+  font-family: var(--fuente-principal);
 }
