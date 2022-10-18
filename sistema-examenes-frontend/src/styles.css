@@ -19,7 +19,7 @@ body {
 }
 
 .text-center{
-  text-align: center;
+  text-align: center !important;
 }
 
 .full-width{
@@ -69,4 +69,7 @@ body {
 .color-boton-segundario{
   background-color: #4b7728;
   font-family: var(--fuente-principal);
+}
+.w100{
+  width: 100%;
 }

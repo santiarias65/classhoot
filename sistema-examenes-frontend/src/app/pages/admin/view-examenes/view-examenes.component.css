@@ -1,0 +1,10 @@
+.example-header-image{
+    background-image: url('../../../../assets/test.png');
+    background-size: cover;
+}
+.titulo{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}

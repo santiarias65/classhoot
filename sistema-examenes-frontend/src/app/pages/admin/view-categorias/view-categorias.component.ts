@@ -23,7 +23,7 @@ export class ViewCategoriasComponent implements OnInit {
       },
       (error)=>{
         console.log(error);
-        Swal.fire('Error al cargar las categorias','error');
+        Swal.fire('Error !!','Error al cargar las categorias','error');
       }
     )
   }

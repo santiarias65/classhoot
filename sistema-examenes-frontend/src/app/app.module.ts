@@ -19,6 +19,7 @@ import { HomeComponent } from './pages/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import {MatSelectModule} from '@angular/material/select';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
@@ -29,8 +30,14 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewCategoriasComponent } from './pages/admin/view-categorias/view-categorias.component';
 import { AddCategoriaComponent } from './pages/admin/add-categoria/add-categoria.component';
-import { ViewExamenesComponent } from './pages/view-examenes/view-examenes.component';
-import { AddExamenComponent } from './pages/add-examen/add-examen.component';
+import { ViewExamenesComponent } from './pages/admin/view-examenes/view-examenes.component';
+import { AddExamenComponent } from './pages/admin/add-examen/add-examen.component';
+import { ActualizarExamenComponent } from './pages/admin/actualizar-examen/actualizar-examen.component';
+import { ViewExamenPreguntasComponent } from './pages/admin/view-examen-preguntas/view-examen-preguntas.component';
+import { AddPreguntaComponent } from './pages/admin/add-pregunta/add-pregunta.component';
+import { ActualizarPreguntaComponent } from './pages/admin/actualizar-pregunta/actualizar-pregunta.component';
+import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.component';
+import { LoadExamenComponent } from './pages/user/load-examen/load-examen.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +54,13 @@ import { AddExamenComponent } from './pages/add-examen/add-examen.component';
     ViewCategoriasComponent,
     AddCategoriaComponent,
     ViewExamenesComponent,
-    AddExamenComponent
+    AddExamenComponent,
+    ActualizarExamenComponent,
+    ViewExamenPreguntasComponent,
+    AddPreguntaComponent,
+    ActualizarPreguntaComponent,
+    UserSidebar,
+    LoadExamenComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +76,8 @@ import { AddExamenComponent } from './pages/add-examen/add-examen.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSlideToggleModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

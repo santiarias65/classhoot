@@ -46,15 +46,22 @@ public class PreguntaController {
         preguntaService.eliminarPregunta(idpregunta);
     }
 
-    @GetMapping("examen/{idExamen}")
-    public ResponseEntity<?> listarpreguntasExamen(@PathVariable("idExamen")Long idExamen){
+    @GetMapping("/examen/preguntas/{idExamen}")
+    public ResponseEntity<?> listarpreguntasExamenAdministrador(@PathVariable("idExamen")Long idExamen){
+        Examen examen = examenService.obtenerExamen(idExamen);
+        Set<Pregunta> preguntas = examen.getPreguntas();
+        List listaPreguntas = new ArrayList(preguntas);
+        return ResponseEntity.ok(listaPreguntas);
+    }
+    //el metodo genera las preguntas aleatorias al generar un examen
+    /*public void generarPreguntasPresentarExamen(){
         Examen examen = examenService.obtenerExamen(idExamen);
         Set<Pregunta> preguntas = examen.getPreguntas();
         List listaPreguntas = new ArrayList(preguntas);
         Collections.shuffle(listaPreguntas);
         listaPreguntas = listaPreguntas.subList(0,Integer.parseInt(examen.getNumeroPreguntas()));
         return ResponseEntity.ok(listaPreguntas);
-    }
+    }*/
 
 
 
