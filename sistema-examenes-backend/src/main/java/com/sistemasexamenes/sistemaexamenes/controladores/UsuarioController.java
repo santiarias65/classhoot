@@ -40,6 +40,12 @@ public class UsuarioController {
         return usuarioService.guardarUsuario(usuario,usuarioRoles);
     }
 
+    @GetMapping("/comprobar-usuario/{username}")
+    public boolean comprobarUsuarioRegistrado(@PathVariable("username") String username){
+        Usuario usuario = usuarioService.obtenerUsuario(username);
+        return usuario !=null ? true : false;
+    }
+
     @GetMapping("/{username}")
     public Usuario obtenerUsuario(@PathVariable("username") String username){
         return usuarioService.obtenerUsuario(username);

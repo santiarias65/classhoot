@@ -10,7 +10,7 @@ export class ExamenesService {
   constructor(private http : HttpClient) { }
 
   public listarExamenes(){
-    return this.http.get(`${baserUrl}/examen/`)
+    return this.http.get(`${baserUrl}/examen/`);
   }
 
   public agregarExamen(examen:any){
@@ -31,5 +31,13 @@ export class ExamenesService {
 
   public listarExamenesPorCategoria(categoriaId : number){
     return this.http.get(`${baserUrl}/examen/categoria/${categoriaId}`);
+  }
+
+  public obtenerExamenesActivos(){
+    return this.http.get(`${baserUrl}/examen/activo`);
+  }
+
+  public obtenerExamenActivoCategoria(categoriaId : number){
+    return this.http.get(`${baserUrl}/examen/categoria/activo/${categoriaId}`);
   }
 }

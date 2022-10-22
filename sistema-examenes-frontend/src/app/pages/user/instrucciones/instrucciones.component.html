@@ -1,0 +1,38 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt20">
+                    <mat-card-header style="justify-content: center;">
+                        <mat-card-title class="text-center">
+                            Lea las Instrucciones Cuidadosamente
+                        </mat-card-title>
+                        <!--<mat-card-subtitle>
+                            Luego de leer las instrucciones la prueba iniciara
+                        </mat-card-subtitle>-->
+                    </mat-card-header>
+                    <mat-card-content class="ml30">
+                        <h1>{{examen.titulo}}</h1>
+                        <p>{{examen.descripcion}}</p>
+
+                        <mat-divider></mat-divider>
+
+                        <br>
+                        <h1>Instrucciones</h1>
+
+                        <ul>
+                            <li>Este examen es sola para fines de practica</li>
+                            <li>Puedes realizar el examen la cantidad de veces que quieras</li>
+                            <li>El tiempo del cuestionario es <b>{{examen.numeroPreguntas * 2}} Minutos</b></li> 
+                            <li>Tienes <b>{{examen.puntosMaximos/examen.numeroPreguntas}}{{examen.puntosMaximos/examen.numeroPreguntas == 1 ? " Punto" : " Puntos"}}</b> Por pregunta contestada correctamente</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions class="text-center mb20">
+                        <button (click)="empezarExamen()" mat-raised-button 
+                        color="primary">Iniciar prueba</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

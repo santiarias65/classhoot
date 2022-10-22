@@ -22,7 +22,7 @@ export class LoadExamenComponent implements OnInit {
         this.categoriaId = params['categoriaId'];
         if(this.categoriaId == 0){
           console.log('Cargando todos los examenes');
-          this.examenService.listarExamenes().subscribe(
+          this.examenService.obtenerExamenesActivos().subscribe(
             (data:any)=>{
               this.examenes = data;
               console.log(data);
@@ -33,7 +33,7 @@ export class LoadExamenComponent implements OnInit {
           )
         }else{
           console.log('cargando un examen');
-          this.examenService.listarExamenesPorCategoria(this.categoriaId).subscribe(
+          this.examenService.obtenerExamenActivoCategoria(this.categoriaId).subscribe(
             (data : any)=>{
               this.examenes = data;
             },

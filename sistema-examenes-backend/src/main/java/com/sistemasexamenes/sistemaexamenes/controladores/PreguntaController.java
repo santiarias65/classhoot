@@ -54,14 +54,20 @@ public class PreguntaController {
         return ResponseEntity.ok(listaPreguntas);
     }
     //el metodo genera las preguntas aleatorias al generar un examen
-    /*public void generarPreguntasPresentarExamen(){
+    @GetMapping("examen/todos/{idExamen}")
+    public ResponseEntity<?> generarPreguntasPresentarExamen(@PathVariable("idExamen")Long idExamen){
         Examen examen = examenService.obtenerExamen(idExamen);
         Set<Pregunta> preguntas = examen.getPreguntas();
         List listaPreguntas = new ArrayList(preguntas);
+
+        //bandera que utilizamos si el examen tiene menos preguntas registradas que la cantidad de preguntas
+        //que se estipula en el examen
+        int bandera = (preguntas.size() < Integer.parseInt(examen.getNumeroPreguntas())) ? preguntas.size() : Integer.parseInt(examen.getNumeroPreguntas());
+
         Collections.shuffle(listaPreguntas);
-        listaPreguntas = listaPreguntas.subList(0,Integer.parseInt(examen.getNumeroPreguntas()));
+        listaPreguntas = listaPreguntas.subList(0,bandera);
         return ResponseEntity.ok(listaPreguntas);
-    }*/
+    }
 
 
 

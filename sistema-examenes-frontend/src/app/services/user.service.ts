@@ -14,4 +14,8 @@ export class UserService {
       return this.httpClient.post(`${baserUrl}/usuarios/`,user);
     }
 
+    public comprobarUsuario(username : String){
+      return this.httpClient.get(`${baserUrl}/usuarios/comprobar-usuario/${username}`);
+    }
+
 }
