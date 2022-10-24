@@ -1,0 +1,61 @@
+@import '@angular/material/theming';
+
+@include mat-core();
+
+
+// GAMA COLORES
+$my-primary-color: (
+  100 : #b2e3fb,
+  500 : #02a2ee,
+  700 : #0482cb,
+  contrast: (
+    100 : #000000,
+    500 : #000000,
+    700 : #ffffff,
+  )
+);
+
+$my-accent-color: (
+  100 : #8fc5b8,
+  500 : #00c988,
+  700 : #17775d,
+  contrast: (
+    100 : #000000,
+    500 : #000000,
+    700 : #ffffff,
+  )
+);
+
+$my-warn-color: (
+  100 : #feba80,
+  500 : #ff9700,
+  700 : #fc6100,
+  contrast: (
+    100 : #000000,
+    500 : #000000,
+    700 : #000000,
+  )
+);
+
+// PALETA DE COLORES
+$my-palette-primary: mat-palette($my-primary-color);
+$my-palette-accent: mat-palette($my-accent-color);
+$my-palette-warn: mat-palette($my-warn-color);
+
+// TEMA PROPIO
+$my-theme: mat-light-theme((
+ color: (
+   primary: $my-palette-primary,
+   accent: $my-palette-accent,
+   warn: $my-palette-warn
+ )
+));
+
+// APLICAR NUESTRO TEMA A ANGULAR
+@include angular-material-theme($my-theme);
+
+
+// REEMPLAZA EN ANGULAR.JSON -> STYLES
+// "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+// POR LA RUTA DEL CUSTOM THEME
+// "src/assets/styles/my-theme.scss",
